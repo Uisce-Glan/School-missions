@@ -4,21 +4,20 @@ namespace Party_Dilema
 {
     internal class Program
     {
+        static int Factorial(int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return n * Factorial(n - 1);
+            }
+        }
         static void Main(string[] args)
         {
             int number;
-
-            
-            int Factorial(int n)
-            {
-                int runningTotal = 1;
-                while (n > 0)
-                {
-                    runningTotal *= n;
-                    n--;
-                }
-                return runningTotal;
-            }
 
 
             Console.WriteLine("How many players?");
