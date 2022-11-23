@@ -1,36 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Threading.Tasks.Dataflow;
 
 namespace Party_Shuffle
 {
     internal class Program
     {
-        
+
+        static List<string> ShuffleList(List<string> items)
+        {
+            Random random = new Random();
+
+            var returnNames = new List<string>();
+            int n = items.Count;
+            for (int i = 0; i < n; i++)
+            {
+                int j = random.Next(0, items.Count);
+                returnNames.Add(items[j]);
+                items.RemoveAt(j);
+            }
+            return returnNames;
+        }
 
         static void Main(string[] args)
         {
-            Random random = new Random();
+
 
             var names = new List<string>();
             
 
-
-            string ShuffleList(List<string> items)
-            {
-                
-                var returnNames = new List<string>();
-                int n = items.Count;
-                for (int i = 0; i < n; i++)
-                {
-                    int j = random.Next(0, items.Count);
-                    returnNames.Add(items[j]);
-                    items.RemoveAt(j);
-                }
-                return string.Join(", ", returnNames);
-            }
-
-            
             names.Add("This");
             names.Add("Sentance");
             names.Add("Probably");
@@ -41,8 +40,9 @@ namespace Party_Shuffle
             Console.ReadLine();
             Console.WriteLine("Shuffling words...");
             Console.ReadLine();
-            Console.WriteLine(ShuffleList(names));
+            Console.WriteLine(String.Join(", " ,ShuffleList(names)));
             Console.ReadLine();
+            
         }
     }
 }
