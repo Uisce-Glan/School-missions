@@ -332,8 +332,8 @@ namespace Adventure_Map_2._0__Now_with_2D_Arrays__
         }
         static void Main(string[] args)
         {
-            var height = 120;
-            var width = 40;
+            var height = 90;
+            var width = 30;
             Map(width, height); //I think making everything into functions was a mistake that made things overly complicated, and in hindsight what I thought was a good idea to make on the fly might not have been such a good idea.
 
         } //Also i don't feel like i need to customize it to make it my own, since its already a train wreck, but it's my train wreck and I'm attached to its quirks.
