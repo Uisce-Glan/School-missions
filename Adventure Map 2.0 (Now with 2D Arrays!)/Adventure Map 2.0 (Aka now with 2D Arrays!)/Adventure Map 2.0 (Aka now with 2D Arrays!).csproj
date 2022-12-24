@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Adventure_Map_2._0__Aka_now_with_2D_Arrays__</RootNamespace>
+  </PropertyGroup>
+
+</Project>
