@@ -11,14 +11,13 @@ namespace Adventure_Map_2._0__Now_with_2D_Arrays__
             var random = new Random();
 
             var randomCurve = 0;
-            var noRepeatCharacters = 0;
             var curve = 0;
 
             for (int x = 0; x < maxX; x++)
             {
                 for (int y = 0; y < maxY; y++)
                 {
-                    if (y == (startLocation) + curve && x > noRepeatCharacters)
+                    if (y == (startLocation) + curve)
                     {
                         randomCurve = random.Next(randomCurveOdds); //The curviture is decided by the random getting 1 and 2, everything else is straight line
                         if (randomCurve == 0)
@@ -42,7 +41,7 @@ namespace Adventure_Map_2._0__Now_with_2D_Arrays__
                         {
                             curviture[x, y] = 3;
                         }
-                        noRepeatCharacters = x; //Makes sure it doesn't jump one x to the side and instantly place another character.
+                        break; //Breaks out of the loop
                     }
                 }
             }

@@ -42,7 +42,7 @@ namespace Insertion_sort
 
         static void Main(string[] args)
         {
-            var data = new List<int>() { 5, -2, 1, 3, -5, -2, -3 };
+            var data = new List<int>() { -5, 2, 1, 6, 8, 4 };
 
             // Insertion sort
 
